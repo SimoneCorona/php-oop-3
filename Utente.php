@@ -2,6 +2,7 @@
 require_once __DIR__ . "./UserInfo.php";
 class Utente {
     use UserInfo;
+    
     public $name;
     public $user_is_registered = true;
     public $credit_card_expiration;
@@ -39,6 +40,8 @@ class Utente {
 
         if ($this->credit_card_expiration > $today_is) {
             return "Carta di credito valida";
-        } else return "Carta di credito scaduta";
+        } else {
+            throw new Exception("Carta di credito non valida");
+        }
     }
 }

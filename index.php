@@ -20,7 +20,12 @@ $peluche = new Giochino(21, "GR7676OP");
 $buyer = new Utente("Simone", "simone@gmail.com", "2027");
 $buyer->add_to_cart($peluche);
 $buyer->add_to_cart($bocconcini_sapore_di_pollo);
-$buyer->checkCreditCardExpiration();
+try {
+    $buyer->checkCreditCardExpiration();
+} catch (Exception $e) {
+    echo "Controlla la scadenza della tua carta di credito";
+    var_dump($e->getMessage());
+}
 
 ?>
 
