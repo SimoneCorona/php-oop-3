@@ -21,6 +21,7 @@ $buyer = new Utente("Simone", "simone@gmail.com", "2027");
 $buyer->add_to_cart($peluche);
 $buyer->add_to_cart($bocconcini_sapore_di_pollo);
 $buyer->checkCreditCardExpiration();
+
 ?>
 
 <!DOCTYPE html>

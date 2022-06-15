@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . "./UserInfo.php";
 class Utente {
-
+    use UserInfo;
     public $name;
     public $user_is_registered = true;
     public $credit_card_expiration;
